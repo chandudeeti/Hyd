@@ -1,0 +1,14 @@
+127.0.0.1 - - [18/Apr/2023:13:10:31 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [18/Apr/2023:13:10:33 +0530] "GET /CmsJsfHib/faces/AddPharmacy.xhtml HTTP/1.1" 200 10296
+0:0:0:0:0:0:0:1 - - [18/Apr/2023:13:10:33 +0530] "GET /CmsJsfHib/faces/javax.faces.resource/components.js?ln=primefaces&v=12.0.0 HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [18/Apr/2023:13:10:33 +0530] "GET /CmsJsfHib/faces/javax.faces.resource/jquery/jquery-plugins.js?ln=primefaces&v=12.0.0 HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [18/Apr/2023:13:10:33 +0530] "GET /CmsJsfHib/faces/javax.faces.resource/jquery/jquery.js?ln=primefaces&v=12.0.0 HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [18/Apr/2023:13:10:33 +0530] "GET /CmsJsfHib/faces/javax.faces.resource/theme.css?ln=primefaces-saga&v=12.0.0 HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [18/Apr/2023:13:10:33 +0530] "GET /CmsJsfHib/faces/javax.faces.resource/primeicons/primeicons.css?ln=primefaces&v=12.0.0 HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [18/Apr/2023:13:10:33 +0530] "GET /CmsJsfHib/faces/javax.faces.resource/components.css?ln=primefaces&v=12.0.0 HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [18/Apr/2023:13:10:33 +0530] "GET /CmsJsfHib/faces/javax.faces.resource/core.js?ln=primefaces&v=12.0.0 HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [18/Apr/2023:13:10:33 +0530] "GET /CmsJsfHib/faces/javax.faces.resource/watermark/watermark.js?ln=primefaces&v=12.0.0 HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [18/Apr/2023:13:10:33 +0530] "GET /CmsJsfHib/faces/RES_NOT_FOUND HTTP/1.1" 500 163
+0:0:0:0:0:0:0:1 - - [18/Apr/2023:13:10:33 +0530] "GET /CmsJsfHib/img/01.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [18/Apr/2023:13:10:33 +0530] "GET /favicon.ico HTTP/1.1" 404 1085
+0:0:0:0:0:0:0:1 - - [18/Apr/2023:13:11:11 +0530] "POST /CmsJsfHib/faces/AddPharmacy.xhtml HTTP/1.1" 500 163

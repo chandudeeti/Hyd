@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<style>
+.error-message {
+	font-size: 14px;
+	color: #fc030f;
+	font-weight: bold;
+	margin-top: 5px;
+	padding: 10px;
+}
+.Bimage {
+	background-image: url(#{request.contextPath}/img/pic1.jpg);
+	background-size: cover;
+	background-repeat: repeat-y;
+	margin: 0px;
+	padding: 0px;
+}
+}
+.form-control:focus {
+	box-shadow: none;
+	border-color: #ced4da;
+}
+
+</style>
+</h:head>
+<h:body class="Bimage" >
+	<f:facet name="last">
+		<h:outputStylesheet library="default" name="css/style.css" />
+	</f:facet>
+	<center>
+		<h1>User Account Creation</h1>
+		<div style="width: 500px">
+			<h:form>
+				<p:panel id="panel-signup">
+					<!-- enable focus component -->
+					<p:focus context="panel-signup" />
+					<div style="display: flex; text-align: left; font-weight: bold;  flex-direction: column">
+						Name :
+						<p:inputText id="Name" required="true"
+							label="Please Enter user Name" size="40"
+							requiredMessage="Please enter user name." value="#{user.name}">
+						</p:inputText>
+						<p:watermark for="Name" value="Name *" />
+						<h:message for="Name" styleClass="error-message" />
+					</div>
+					<br></br>
+					<div style="display: flex; text-align: left; font-weight: bold; flex-direction: column">
+						Phone No:
+						<p:inputText id="PhoneNo" required="true"
+							label="Please Enter Phone No" size="40"
+							requiredMessage="Please enter Phone." value="#{user.phone}"
+							validatorMessage="Please enter a valid 10-digit phone number">
+							<f:convertNumber integerOnly="true" />
+							<f:validateLongRange minimum="0" maximum="9999999999" />
+							<f:validator validatorId="com.hib.jsf.PhoneValidator" />
+
+						</p:inputText>
+						<p:watermark for="PhoneNo" value="PhoneNo *" />
+						<h:message for="PhoneNo" styleClass="error-message" />
+					</div>
+
+					<div style="display: flex; text-align: left; font-weight: bold; flex-direction: column">
+						Email :
+						<p:inputText id="Email" required="true" label="Please Enter Email"
+							size="40" requiredMessage="Please enter Email."
+							value="#{user.email}"
+							validatorMessage="Please enter a valid email address">
+							<f:validateRegex
+								pattern="^[^0-9\W][\w.-]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" />
+						</p:inputText>
+						<p:watermark for="Email" value="Email *" />
+						<h:message for="Email" styleClass="error-message" />
+
+					</div>
+
+					<div style="display: flex; text-align: left; font-weight: bold; flex-direction: column">
+						Address :
+						<p:inputText id="Address" required="true"
+							label="Please Enter Email" size="40"
+							requiredMessage="Please enter Address." value="#{user.address}"
+							validatorMessage="Please enter address">
+						</p:inputText>
+						<p:watermark for="Address" value="Ex: H.no. Mandal and Dist" />
+						<h:message for="Address" styleClass="error-message" />
+					</div>
+
+					<div style="display: flex; text-align: left; font-weight: bold; flex-direction: column">
+						Age :
+						<p:inputText id="Age" required="true" label="Please Enter Age"
+							size="40" requiredMessage="Please enter Age."
+							styleClass="input-field" value="#{user.age}"
+							validatorMessage="Please enter a valid age (must be a number)">
+							<f:validateLongRange minimum="0" maximum="999" />
+							<f:convertNumber integerOnly="true" />
+						</p:inputText>
+						<p:watermark for="Age" value="Age *" />
+						<h:message for="Age" styleClass="error-message" />
+					</div>
+				Gender :
+				<div style="display: flex; text-align: left; font-weight: bold; flex-direction: column">
+				<div style="display: flex; flex-direction: row">
+						
+							<p:selectOneRadio id="gender" value="#{user.gender}"
+								required="true" requiredMessage="Select Gender"
+								layout="pageDirection">
+								<f:selectItems value="#{pDao.gender}" />
+							</p:selectOneRadio>
+						
+						<h:message for="gender" styleClass="error-message" />
+					</div>
+					</div>
+
+					<div style="display: flex; text-align: left; font-weight: bold; flex-direction: column">
+						User Name :
+						<p:password id="userName" required="true" label="user Name"
+							size="40" requiredMessage="Please enter user name."
+							value="#{user.userName}" maxlength="20">
+						</p:password>
+						<p:watermark for="userName" value="userName *" />
+						<h:message for="userName" styleClass="error-message" />
+					</div>
+					<div style="display: flex; text-align: left; font-weight: bold; flex-direction: column">
+						Password :
+						<p:password id="password" required="true" label="password"
+							size="40" requiredMessage="Please enter your password."
+							match="confirmPassword" value="#{user.password}" maxlength="20">
+						</p:password>
+						<p:watermark for="password" value="Password *" />
+						<h:message for="password" styleClass="error-message" />
+					</div>
+					<div style="display: flex; text-align: left; font-weight: bold; flex-direction: column">
+						Confirm Password :
+						<p:password id="confirmPassword" required="true" size="40"
+							requiredMessage="Please confirm your password."
+							label="confirmPassword" value="#{confirmPassword}" maxlength="20">
+						</p:password>
+						<p:watermark for="confirmPassword" value="Type Password Again *" />
+						<h:message for="confirmPassword" style="right-margin:50px" />
+					</div>
+
+					<p:commandButton value="Create Account" style="margin:20px"
+						action="#{pDao.addUser(user)}" ajax="false" />
+					<h:messages globalOnly="true" layout="table"
+						styleClass="error-message" />
+
+				</p:panel>
+			</h:form>
+		</div>
+	</center>
+</h:body>
+</html>

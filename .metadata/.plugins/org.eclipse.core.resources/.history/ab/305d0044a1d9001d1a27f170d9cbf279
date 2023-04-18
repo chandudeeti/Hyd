@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Login Page</title>
+	<link rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+		crossorigin="anonymous" />
+	<style>
+.error-message {
+	font-size: 14px;
+	color: #fc030f;
+	font-weight: bold;
+	margin-top: 5px;
+	padding: 10px;
+}
+
+body {
+	background-image: url("https://picsum.photos/1920/1080");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#login-container {
+	margin-top: 100px;
+	margin-right: 50px;
+	padding: 50px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.input-group-prepend span {
+	width: 50px;
+	background-color: #fff;
+	border: 1px solid #ced4da;
+	border-right: none;
+	border-radius: 5px 0 0 5px;
+}
+
+.form-control:focus {
+	box-shadow: none;
+	border-color: #ced4da;
+}
+</style>
+</h:head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6 offset-md-6" id="login-container">
+				<h:form>
+					<div class="form-group text-center" style="margin-top: 10px;">
+						<h2>User Login</h2>
+					</div>
+
+					<div class="form-group">
+						<label for="userName">Username:</label>
+						<h:inputText id="userName" value="#{user.userName}"
+							required="true" requiredMessage="Please Enter User Name"
+							class="form-control" />
+						<p:watermark for="userName" value="userName *" />
+						<h:message for="userName" styleClass="error-message" />
+					</div>
+					<div class="form-group">
+						<div style="display: flex; flex-direction: column">
+							Name :
+							<p:inputText id="password" required="true"
+								label="Please Enter Password" size="40"
+								requiredMessage="Please enter Password."
+								value="#{user.password}">
+							</p:inputText>
+							<p:watermark for="password" value="password *" />
+							<h:message for="password" styleClass="error-message" />
+						</div>
+					</div>
+					<h:commandButton action="#{pDao.validateUser(user)}" value="Login"
+						class="btn btn-primary" />
+					<br></br>
+					<br></br>
+					New User ? <a href="AddPharmacy.xhtml" class="btn btn-success"
+						style="font-size: 14px; padding: 2px 8px;">Sign Up</a>
+				</h:form>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.12.6/dist/umd/popper.min.js"
+		integrity="sha384-/0j2PjTb9/KjJh/0fU6e1u6lSjV7OuGKP8o7/v+m4XFhKj6DUx7PA+Bb6zS7VuS"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous" />
+</body>
+
+</html>

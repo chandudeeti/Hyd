@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<head>
+
+<title>Pharmacy Dashboard</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+	crossorigin="anonymous" />
+	
+
+<style>
+body {
+	background-image: url("https://picsum.photos/1920/1080");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.navbar {
+	background-color: #007bff;
+	color: #fff;
+}
+
+.navbar-brand img {
+	width: 50px;
+	height: 50px;
+}
+
+.navbar .nav-link {
+	color: #fff;
+}
+
+/* Footer styles */
+footer {
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	padding: 10px 0;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+}
+
+footer a {
+	color: #fff;
+	text-decoration: none;
+}
+</style>
+<script type="text/javascript">window.history.forward();</script>
+</head>
+<h:body >
+	<nav class="navbar navbar-expand-lg navbar-dark">
+		<a class="navbar-brand" href="#"><img
+			src="http://clipart-library.com/images/5iRrxejrT.png"
+			alt="Doctor logo" /></a>
+				<h:outputLabel value="Hi"  style="left-margin=100px"/>
+	</nav>
+	<div class="container">
+    <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="#">Menu Item 1</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Menu Item 2</a></li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Submenu Item 1</a></li>
+                <li><a class="dropdown-item" href="#">Submenu Item 2</a></li>
+                <li><a class="dropdown-item" href="#">Submenu Item 3</a></li>
+            </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Menu Item 3</a></li>
+    </ul>
+</div>
+
+<form>
+	<div class="container mt-4">
+		Last Loggedin by, #{pDao.getName()}
+	Last Logged out time, #{pDao.getDate()}
+		
+		<p>Welcome to our platform......!</p>
+		
+<h:form>
+    <h:commandButton value="Logout" action="#{pDao.logout}" />
+</h:form></div>
+</form>
+		
+	
+
+	<footer>
+		<p>@2023 - All rights reserved</p>
+	</footer>
+
+	<!-- Bootstrap JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.12.6/dist/umd/popper.min.js"
+		integrity="sha384-/0j2PjTb9/KjJh/0fU6e1u6lSjV7OuGKP8o7/v+m4XFhKj6DUx7PA+Bb6zS7VuS"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous" />
+</h:body>
+</html>

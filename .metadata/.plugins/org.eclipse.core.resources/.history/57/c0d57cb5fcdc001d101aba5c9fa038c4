@@ -1,0 +1,31 @@
+package com.hib.jsf;
+
+import java.util.Date;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "info")
+@ManagedBean
+@SessionScoped
+public class Info {
+	
+	@Id
+	private int id;
+	private String name;
+	@Column(name = "date_time")
+	private Date dateTime;
+	
+	p
+	
+	
+	
+	
+	
+
+}

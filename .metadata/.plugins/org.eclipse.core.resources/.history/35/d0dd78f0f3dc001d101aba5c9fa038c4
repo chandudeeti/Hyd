@@ -1,0 +1,11 @@
+package com.hib.jsf;
+
+import java.sql.Date;
+
+public class Info {
+	
+	
+	private String name;
+	private Date dateTime;
+
+}

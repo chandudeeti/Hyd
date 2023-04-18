@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#PharmacyDashboard.xhtml"
+  PATH="/PharmacyDashboard.xhtml" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#PharmacyDashboard.xhtml:0" NAME="item"
+   PATH="/PharmacyDashboard.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="logout::#UserLogin.xhtml" NAME="output"
+    PATH="/UserLogin.xhtml" TARGET="rules:#UserLogin.xhtml"
+    TITLE="logout" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#UserLogin.xhtml" PATH="/UserLogin.xhtml"
+  SHAPE="240,33,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

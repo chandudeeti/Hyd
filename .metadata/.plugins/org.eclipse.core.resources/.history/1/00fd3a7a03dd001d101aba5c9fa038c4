@@ -1,0 +1,12 @@
+package com.hib.jsf;
+
+public class MainClass {
+	
+	public static void main(String[] args) {
+		
+		PharmacyDaoImpl daoImpl  = new PharmacyDaoImpl();
+		System.out.println(daoImpl.getId("chandu"));
+		
+	}
+
+}

@@ -1,0 +1,8 @@
+package com.hib.jsf;
+
+public interface PharmacyDAO {
+	
+	String addPharmacy(User pharmacy);
+	public String validateMe(User pharmacy);
+
+}

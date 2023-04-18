@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<head>
+
+<title>Pharmacy Dashboard</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+	crossorigin="anonymous" />
+
+<style>
+body {
+	background-image: url("data:image/jpeg;base64,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");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.navbar {
+	background-color: #007bff;
+	color: #fff;
+}
+
+.navbar-brand img {
+	width: 50px;
+	height: 50px;
+}
+
+.navbar .nav-link {
+	color: #fff;
+}
+
+/* Footer styles */
+footer {
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	padding: 10px 0;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+}
+
+footer a {
+	color: #fff;
+	text-decoration: none;
+}
+</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark">
+		<a class="navbar-brand" href="#"><img
+			src="http://clipart-library.com/images/5iRrxejrT.png"
+			alt="Doctor logo" /></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarNav" aria-controls="navbarNav"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item active"><a class="nav-link"
+					href="PharmacyDashboard.xhtml">Home</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Contacts</a>
+				</li>
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#"
+					id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false"> Profile </a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" data-toggle="collapse"
+							href="#profileDetails" aria-expanded="false"
+							aria-controls="profileDetails">Profile</a>
+						<div class="collapse" id="profileDetails">
+							<div class="card card-body">
+								Name: #{user.name}
+								Email: #{user.email}
+								Phone: #{user.phone}
+							</div>
+						</div>
+						<a class="dropdown-item" href="#">Action</a> <a
+							class="dropdown-item" href="#">Another action</a> <a
+							class="dropdown-item" href="#">Something else here</a>
+					</div></li>
+			
+
+			</ul>
+		</div>
+	</nav>
+
+
+	<div class="container mt-4">
+		<h2>Hello, #{user.name}</h2>
+		<p>Welcome to our platform......!</p>
+	</div>
+
+	<footer>
+		<p>@2023 - All rights reserved</p>
+	</footer>
+
+	<!-- Bootstrap JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.12.6/dist/umd/popper.min.js"
+		integrity="sha384-/0j2PjTb9/KjJh/0fU6e1u6lSjV7OuGKP8o7/v+m4XFhKj6DUx7PA+Bb6zS7VuS"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous" />
+</body>
+</html>

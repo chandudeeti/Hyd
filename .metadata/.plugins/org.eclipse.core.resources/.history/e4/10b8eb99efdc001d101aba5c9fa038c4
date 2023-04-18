@@ -1,0 +1,5 @@
+package com.hib.jsf;
+
+public class ExceptionHandler extends Exception{
+
+}

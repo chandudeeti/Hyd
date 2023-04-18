@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+D:\InfiniteTasksHibernate\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+496558336.index
+697168037.index
+1735879090.index
+955926509.index
+794021153.index
+973875153.index
+1521563967.index

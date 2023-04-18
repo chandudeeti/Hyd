@@ -1,0 +1,42 @@
+2023-04-17 12:26:53,585 [http-nio-8181-exec-8] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2023-04-17 12:26:53,614 [http-nio-8181-exec-8] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.5.Final}
+2023-04-17 12:26:53,619 [http-nio-8181-exec-8] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2023-04-17 12:26:53,623 [http-nio-8181-exec-8] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2023-04-17 12:26:53,706 [http-nio-8181-exec-8] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2023-04-17 12:26:53,707 [http-nio-8181-exec-8] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2023-04-17 12:26:53,837 [http-nio-8181-exec-8] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2023-04-17 12:26:54,198 [http-nio-8181-exec-8] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2023-04-17 12:26:54,219 [http-nio-8181-exec-8] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/pharmacy]
+2023-04-17 12:26:54,220 [http-nio-8181-exec-8] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {password=****, user=root}
+2023-04-17 12:26:54,221 [http-nio-8181-exec-8] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2023-04-17 12:26:54,227 [http-nio-8181-exec-8] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2023-04-17 12:26:54,847 [http-nio-8181-exec-8] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-17 12:26:55,111 [http-nio-8181-exec-8] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2023-04-17 12:26:55,126 [http-nio-8181-exec-8] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2023-04-17 12:26:55,567 [http-nio-8181-exec-8] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2023-04-17 12:26:55,567 [http-nio-8181-exec-8] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2023-04-17 12:26:55,572 [http-nio-8181-exec-8] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2023-04-17 12:26:55,617 [http-nio-8181-exec-8] INFO  org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: pharmacy.pharm
+2023-04-17 12:26:55,617 [http-nio-8181-exec-8] INFO  org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [pharmid, password, address, gender, phone, name, age, email, username]
+2023-04-17 12:26:55,617 [http-nio-8181-exec-8] INFO  org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+2023-04-17 12:26:55,617 [http-nio-8181-exec-8] INFO  org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary]
+2023-04-17 12:26:55,618 [http-nio-8181-exec-8] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2023-04-17 12:26:55,769 [http-nio-8181-exec-8] INFO  org.hibernate.cfg.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2023-04-17 12:26:55,769 [http-nio-8181-exec-8] INFO  org.hibernate.cfg.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2023-04-17 12:26:55,771 [http-nio-8181-exec-8] INFO  org.hibernate.cfg.Configuration - HHH000041: Configured SessionFactory: null
+2023-04-17 12:26:55,773 [http-nio-8181-exec-8] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2023-04-17 12:26:55,773 [http-nio-8181-exec-8] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/pharmacy]
+2023-04-17 12:26:55,773 [http-nio-8181-exec-8] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {password=****, user=root}
+2023-04-17 12:26:55,773 [http-nio-8181-exec-8] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2023-04-17 12:26:55,773 [http-nio-8181-exec-8] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2023-04-17 12:26:55,799 [http-nio-8181-exec-8] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-17 12:26:55,806 [http-nio-8181-exec-8] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2023-04-17 12:26:55,806 [http-nio-8181-exec-8] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2023-04-17 12:26:55,812 [http-nio-8181-exec-8] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2023-04-17 12:26:55,812 [http-nio-8181-exec-8] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2023-04-17 12:26:55,814 [http-nio-8181-exec-8] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2023-04-17 12:26:55,832 [http-nio-8181-exec-8] INFO  org.hibernate.tool.hbm2ddl.TableMetadata - HHH000261: Table found: pharmacy.pharm
+2023-04-17 12:26:55,832 [http-nio-8181-exec-8] INFO  org.hibernate.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [pharmid, password, address, gender, phone, name, age, email, username]
+2023-04-17 12:26:55,832 [http-nio-8181-exec-8] INFO  org.hibernate.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+2023-04-17 12:26:55,832 [http-nio-8181-exec-8] INFO  org.hibernate.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [primary]
+2023-04-17 12:26:55,832 [http-nio-8181-exec-8] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete

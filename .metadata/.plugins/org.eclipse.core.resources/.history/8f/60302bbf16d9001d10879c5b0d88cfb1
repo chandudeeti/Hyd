@@ -1,0 +1,18 @@
+package com.hib.jsf;
+
+public class MainClass {
+	
+	public static void main(String[] args) {
+		
+		Pharmacy pharmacy = new Pharmacy();
+		pharmacy.setName("chandu");
+		pharmacy.setAddress("Hyd");
+		pharmacy.setEmail("wyagrwuruwe");
+		pharmacy.setPassword("chandu");
+		pharmacy.setPhone("938553854");
+		PharmacyDAO dao = new PharmacyDaoImpl();
+		System.out.println(dao.addPharmacy(pharmacy));
+		
+	}
+
+}
